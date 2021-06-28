@@ -38,15 +38,15 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="#" class="bigPic" style="background-image: url(./images/bannerBig.jpg)"></a>
-          <a href="#" class="smallPic"></a>
+          <a href="#" class="smallPic" style="background-image: url(./images/bannerSmall.jpg)"></a>
         </div>
         <div class="swiper-slide">
           <a href="#" class="bigPic" style="background-image: url(./images/bannerBig2.jpg)"></a>
-          <a href="#" class="smallPic"></a>
+          <a href="#" class="smallPic" style="background-image: url(./images/bannerSmall2.jpg)"></a>
         </div>
         <div class="swiper-slide">
           <a href="#" class="bigPic" style="background-image: url(./images/bannerBig3.jpg)"></a>
-          <a href="#" class="smallPic"></a>
+          <a href="#" class="smallPic" style="background-image: url(./images/bannerSmall3.jpg)"></a>
         </div>
       </div>
       <!-- 如果需要分页器 -->
@@ -308,11 +308,14 @@
 
       </div>
       <div class="qrCodeNvg">
-        <img src="./images/qgCode.jpg\" alt="" style="width: 120px; height: 120px;">
+        <img src="./images/qgCode.jpg\" alt="">
         <p>关注跨刻旅行公众号</p>
       </div>
     </div>
   </section>
+  <!--页面遮罩层-->
+  <section class="mask"></section>
+  <!--*********-->
   <footer class="footer">
     <div class="copyri">
       <p class="copyCon">Copyright &copy; 2019 <span id="year">2022</span>kuakelvxing.com design All right reserved</p>
@@ -347,7 +350,14 @@
     $(document).ready(function(){
       $(".hdMenu").click(function(){
         $(".nvgBox").slideToggle("500");
+        $(this).toggleClass("event");
+        $(".mask").toggle();
       });
+      $(".mask").click(function(){
+        $(this).hide();
+        $(".nvgBox").slideUp("500");
+        $(".hdMenu").removeClass("event");
+      })
     });
     
   </script>
