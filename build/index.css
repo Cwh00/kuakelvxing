@@ -259,6 +259,75 @@ body {
     font-size: 14px;
     opacity: 0.7;
 }
+/* 客户模块 */
+.client {
+    filter: grayscale(100%);
+}
+.client .cliTit h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 15px;
+}
+.client .cliCon ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.client .cliCon .pic {
+    width: 20%;
+    height: 60px;
+}
+/* 底部导航模块 */
+.bottomBox {
+    background: rgb(221, 221, 221);
+    padding: 50px 0;
+}
+.bottomBox .bottomHd {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    filter: grayscale(100%);
+}
+.bottomBox .bottomHd h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+.bottomBox .bottomCon {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+.bottomBox .bottomCon h3 {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.bottomBox .bottomCon li {
+    line-height: 2em;
+}
+.bottomBox .bottomCon .contact h3 {
+    font-weight: 800;
+    color: #00abd9;
+}
+.bottomBox .bottomCon .nvgBox {
+    display: flex;
+    justify-content: space-between;
+}
+.bottomBox .bottomCon .nvgBox div {
+    margin-right: 70px;
+}
+.bottomBox .bottomCon .nvgBox a:hover {
+    color: #00abd9;
+}
+/* 底部版权模块 */
+.footer .copyri {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0);
+    color: #fff;
+    line-height: 50px;
+}
 @font-face {
   font-family: "iconfont"; /* Project id 2636004 */
   src: url(./font/iconfont9350a0b1161356648ca20c4850d9ae1e.woff2) format('woff2'),
