@@ -1,0 +1,293 @@
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+ul,ol,li {
+    list-style: none;
+}
+a {
+    color:#333;
+    text-decoration: none;
+}
+input,textarea {
+    outline: none;
+}
+body {
+    font-family: "Microsoft yahei,songti";
+    font-size: 14px;
+    text-align: center;
+    /* width: 100%;
+    height: 100%; */
+}
+/* 公共样式 */
+.pubCon {
+    width: 1200px;
+    margin: 0 auto;
+}
+.line {             
+    display: block;
+    width: 50px;
+    height: 1.5px;
+    background: #00abd9;
+}
+.title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 头部模块样式 */
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255,255,255,0.8);
+    position: fixed;
+    z-index: 10;
+}
+.header .hdCon {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .hdCOn .logoBox {
+    height: 60px;
+}
+.header .hdCon .nvgBox ul {
+    display: flex;
+    /* height: 100%; */
+}
+.header .nvgBox li {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    margin: 0px 15px;
+}
+.header .hdCon .nvgBox li:hover a{
+    color: #00abd9;
+}
+.header .hdCon .nvgBox li:hover a::after {
+    opacity: 1;
+}
+.header a {
+    display: block;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.header .nvgBox a:after {
+    display: block;
+    content: " ";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #00abd9;
+    position: absolute;
+    left: calc(50% - 3px);
+    bottom: -8px;
+    opacity: 0;
+    transition: 0.3s;
+}
+/* 横幅模块样式 */
+.banner {
+    height: 500px;
+    background-color: #333;
+}
+.banner a{
+    display: block;
+    height: 500px;
+    background: no-repeat center;
+    /* background-size: 100% 500px; */
+}
+.banner a.smallPic {
+    display: none;
+}
+
+/* 服务模块样式 */
+
+.service .serTit h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 15px;
+}
+.service .serCon {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+.service .serCon .serBox {
+    width: 250px;
+    height: 350px;
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service .serCon .serBox a{
+    display: block;
+}
+.service .serCon .serBox .iconCon {
+    width: 200px;
+    height: 200px;
+    border: 1.5px solid #00abd9;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    line-height: 200px;
+    text-align: center;
+    background: #fff;
+    transition: 0.4s;
+}
+.service .serCon .serBox .iconCon:hover {
+    background: #00abd9;
+}
+.service .serCon .serBox .iconCon .iconfont {
+    font-size: 60px;
+    color: #00abd9;
+}
+.service .serCon .serBox .iconCon:hover .iconfont {
+    color: #fff;
+}
+.service .serCon .serBox .iconCon:hover h3 {
+    color: #00abd9;
+}
+.service .serCon .serBox h3 {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.service .serCon .serBox p {
+    opacity: 0.8;
+}
+/* 关于我们模块 */
+.about {
+    color: #fff;
+    width: 100%;
+    height: 400px;
+    background: url(./images/aboutbg001019902a.jpg) no-repeat center fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0;
+    overflow: hidden;
+}
+.about .aboutTit h2{
+    padding: 0 400px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+.about .aboutCon p{
+    padding: 0 100px;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 50px;
+}
+.about .buttongrop button{
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #f67b1f, #ef2d58);
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.about .buttongrop button:hover {
+    opacity: 1;
+}
+.about .buttongrop .buttonRight {
+    background-image: linear-gradient(to right, #0fcfd7, #5960ff);
+}
+
+/* 项目案例模块样式 */
+.porject .porTit h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 15px;
+}
+/* .porject .porCon {
+    display: flex;
+    justify-content: center;
+} */
+.porject .porCon ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.porject .porCon li {
+    display: block;
+    position: relative;
+    width: 32%;
+    margin-bottom: 20px;
+    perspective: 600px;
+    overflow: hidden;
+}
+.porject .porCon .pic {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.porject .porCon .ceng {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform:rotateX(105deg);
+    transform-origin: bottom;
+    transition: 0.3s;
+}
+.porject .porCon li:hover .ceng {
+    transform: rotateX(0deg);
+}
+.porject .porCon .ceng h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.porject .porCon .ceng p {
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.7;
+}
+@font-face {
+  font-family: "iconfont"; /* Project id 2636004 */
+  src: url(./font/iconfont9350a0b1161356648ca20c4850d9ae1e.woff2) format('woff2'),
+       url(./font/iconfont319f34721fb7cf793a29ef1c0a5f245b.woff) format('woff'),
+       url(./font/iconfont1a56a02aea1d486d7656c2ef484c2877.ttf) format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-all:before {
+  content: "\e6ef";
+}
+
+.icon-cart-full:before {
+  content: "\e746";
+}
+
+.icon-earth:before {
+  content: "\e74e";
+}
+
+.icon-mobile-phone:before {
+  content: "\e759";
+}
+
+
