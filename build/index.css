@@ -44,6 +44,7 @@ body {
     background-color: rgba(255,255,255,0.8);
     position: fixed;
     z-index: 10;
+    border-bottom: 1px solid #efefef;
 }
 .header .hdCon {
     height: 100%;
@@ -56,7 +57,6 @@ body {
 }
 .header .hdCon .nvgBox ul {
     display: flex;
-    /* height: 100%; */
 }
 .header .nvgBox li {
     position: relative;
@@ -88,6 +88,31 @@ body {
     opacity: 0;
     transition: 0.3s;
 }
+.header .hdMenu {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    cursor: pointer;
+}
+.header .hdMenu .menuLine {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    margin: 3px 0;
+}
+.header .hdMenu:hover {
+    border: 1px solid #00abd9;
+}
+.header .hdMenu:hover .menuLine {
+    background-color: #00abd9;
+}
 /* 横幅模块样式 */
 .banner {
     height: 500px;
@@ -97,7 +122,6 @@ body {
     display: block;
     height: 500px;
     background: no-repeat center;
-    /* background-size: 100% 500px; */
 }
 .banner a.smallPic {
     display: none;
@@ -327,6 +351,35 @@ body {
     background-color: rgba(0,0,0);
     color: #fff;
     line-height: 50px;
+}
+
+
+/* 移动端布局 */
+@media only screen and (max-width: 768px) {
+    .pubCon {
+        width: 100%;
+        padding: 0 20px;
+    }
+    /* 头部模块样式 */
+    .header .hdMenu {
+        display: flex;
+    }
+    .header .hdCon .nvgBox {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba(255,255,255,0.8);
+        padding: 10px 0;
+        display: none;
+    }
+    .header .hdCon .nvgBox ul {
+        flex-direction: column;
+    }
+    .header .nvgBox li {
+        margin: 10px auto;
+    }
 }
 @font-face {
   font-family: "iconfont"; /* Project id 2636004 */
