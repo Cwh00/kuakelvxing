@@ -38,9 +38,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.active {
-    color: #00abd9;
-}
+
 /* 头部模块样式 */
 .header {
     width: 100%;
@@ -68,10 +66,10 @@ body {
     cursor: pointer;
     margin: 0px 15px;
 }
-.header .hdCon .nvgBox li:hover a{
+.header .hdCon .nvgBox li:hover a,.header .nvgBox li.active a {
     color: #00abd9;
 }
-.header .hdCon .nvgBox li:hover a::after {
+.header .hdCon .nvgBox li:hover a::after,.header .nvgBox li.active a::after{
     opacity: 1;
 }
 .header a {
@@ -79,7 +77,7 @@ body {
     font-size: 18px;
     transition: 0.3s;
 }
-.header .nvgBox a:after {
+.header .nvgBox a::after {
     display: block;
     content: " ";
     width: 5px;
