@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry: {
         index : "./src/index.js",
+        public : "./src/public.js"
     },
     output: {
         filename: "[name].js",
@@ -52,8 +53,12 @@ module.exports = {
             template: "./src/index.html",
             filename: "index.html"
         }),
+        new HtmlWebpackPlugin({
+            template: "./src/project.html",
+            filename: "project.html"
+        }),
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: "style.css"
 
         })
         //压缩css

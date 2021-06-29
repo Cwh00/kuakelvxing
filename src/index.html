@@ -21,8 +21,8 @@
       </div>
       <div class="nvgBox">
         <ul>
-          <li><a href="#">首页</a></li>
-          <li><a href="#">案例</a></li>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="project.html">案例</a></li>
           <li><a href="#">服务</a></li>
           <li><a href="#">关于我们</a></li>
           <li><a href="#">新闻资讯</a></li>
@@ -342,24 +342,7 @@
       // scrollbar: {
       //   el: '.swiper-scrollbar',
       // },
-    });
-    //   获取当前年份
-    var year = new Date().getFullYear();
-    document.getElementById("year").innerHTML = year.toString();
-    // jQuery展示菜单栏
-    $(document).ready(function(){
-      $(".hdMenu").click(function(){
-        $(".nvgBox").slideToggle("500");
-        $(this).toggleClass("event");
-        $(".mask").toggle();
-      });
-      $(".mask").click(function(){
-        $(this).hide();
-        $(".nvgBox").slideUp("500");
-        $(".hdMenu").removeClass("event");
-      })
-    });
-    
+    });  
   </script>
 </body>
 

@@ -38,6 +38,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.active {
+    color: #00abd9;
+}
 /* 头部模块样式 */
 .header {
     width: 100%;
@@ -448,11 +451,17 @@ body {
     }
     .service .serCon .serBox {
         width: 30%;
-        margin: 0 50px 30px 50px;
+        margin: 0 40px;
+        padding-bottom: 25px;
     }
     .service .serCon .serBox .iconCon {
-        width: 100%;
+        width: 150px;
+        height: 150px;
         margin-bottom: 20px;
+        line-height: 150px;
+    }
+    .service .serCon .serBox .iconCon .iconfont {
+        font-size: 40px;
     }
     /* 关于我们模块 */
     .about {
@@ -489,41 +498,155 @@ body {
     }
     /* 客户模块 */
 
-.client .cliTit h2 {
-    font-size: 18px;
-}
-.client .cliCon .pic {
-    width: 15%;
-    height: 30px;
-    margin: 5px 10px;
-}
-.client .cliCon img{
-    width: 100%;
-    height: 100%;
-}
-/* 底部导航模块 */
-.bottomBox {
-    background: rgb(221, 221, 221);
-    padding: 30px 0;
-}
-.bottomBox .bottomCon {
-    position: relative;
-    flex-direction: column;
-}
-.bottomBox .bottomCon h3 {
-    margin-bottom: 18px;
-}
-.bottomBox .bottomCon li {
-    line-height: 1.5m;
-}
-.bottomBox .bottomCon .nvgBox {
-    margin-top: 30px;
-}
-.bottomBox .bottomCon .qrCodeNvg {
-    position: absolute;
-    right: 60px;
-    top: 10px
-}
+    .client .cliTit h2 {
+        font-size: 18px;
+    }
+    .client .cliCon .pic {
+        width: 15%;
+        height: 30px;
+        margin: 5px 10px;
+    }
+    .client .cliCon img{
+        width: 100%;
+        height: 100%;
+    }
+    /* 底部导航模块 */
+    .bottomBox {
+        background: rgb(221, 221, 221);
+        padding: 30px 0;
+    }
+    .bottomBox .bottomCon {
+        position: relative;
+        flex-direction: column;
+    }
+    .bottomBox .bottomCon h3 {
+        margin-bottom: 18px;
+    }
+    .bottomBox .bottomCon li {
+        line-height: 1.5m;
+    }
+    .bottomBox .bottomCon .nvgBox {
+        margin-top: 30px;
+    }
+    .bottomBox .bottomCon .qrCodeNvg {
+        position: absolute;
+        right: 60px;
+        top: 10px
+    }
 /* 底部版权模块 */
+
+}
+/*小屏幕响应*/
+@media only screen and (min-width: 768px) {
+    /* 公共样式 */
+    .pubCon {
+        width: 750px;
+        margin: 0 auto;
+    }
+    .title {
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+    /* 服务模块样式 */
+    .service .serCon {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .service .serCon .serBox {
+        width: 200px;
+        height: auto;
+        margin: 0 25px;
+    }
+    .service .serCon .serBox .iconCon {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 30px;
+        line-height: 150px;
+    }
+    .service .serCon .serBox .iconCon .iconfont {
+        font-size: 50px;
+    }
+    /* 关于我们模块 */
+    .about {
+        background-attachment: scroll;
+    }
+    .about .aboutTit h2{
+        padding: 0 40px;
+        margin-bottom: 60px;
+    }
+    .about .aboutCon p{
+        padding: 0 80px;
+    }
+}
+/*大屏幕响应*/
+@media only screen and (min-width: 1300px) {
+    /* 公共样式 */
+    .pubCon {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .title {
+        margin-top: 100px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* 服务模块样式 */
+
+    .service .serCon {
+        height: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .service .serCon .serBox {
+        width: 250px;
+        height: 350px;
+        margin: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service .serCon .serBox .iconCon {
+        width: 200px;
+        height: 200px;
+        border: 1.5px solid #00abd9;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        line-height: 200px;
+        text-align: center;
+        background: #fff;
+        transition: 0.4s;
+    }
+
+    .service .serCon .serBox .iconCon .iconfont {
+        font-size: 60px;
+        color: #00abd9;
+    }
+    /* 关于我们模块 */
+    .about {
+        color: #fff;
+        width: 100%;
+        height: 400px;
+        background: url("./images/aboutbg.jpg") no-repeat center fixed;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 0;
+        overflow: hidden;
+    }
+    .about .aboutTit h2{
+        padding: 0 400px;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 80px;
+    }
+    .about .aboutCon p{
+        padding: 0 100px;
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 50px;
+    }
 
 }
